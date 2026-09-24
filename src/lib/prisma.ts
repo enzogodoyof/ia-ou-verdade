@@ -9,7 +9,7 @@ export const FALLBACK_DATABASE_URL =
 
 export function getSanitizedDbUrl(): string {
   let url = process.env.DATABASE_URL?.trim();
-  if (!url) return FALLBACK_DATABASE_URL;
+  if (!url || !url.includes("EnzoExtensao2026")) return FALLBACK_DATABASE_URL;
 
   // Remove todas as aspas
   url = url.replace(/['"]/g, "").trim();
