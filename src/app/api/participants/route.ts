@@ -30,10 +30,16 @@ export async function GET(req: Request) {
       });
     } catch (dbErr: any) {
       console.error("Erro Prisma ao buscar participantes:", dbErr);
+      const rawEnv = process.env.DATABASE_URL || "NOT_SET";
       return NextResponse.json({
         source: "sem_banco",
         message: "Banco de dados não está acessível no momento.",
         errorDetails: dbErr?.message || String(dbErr),
+        debugInfo: {
+          envLength: rawEnv.length,
+          envStart: rawEnv.substring(0, 16),
+          envEnd: rawEnv.substring(rawEnv.length - 12),
+        },
         participants: [],
       });
     }
