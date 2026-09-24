@@ -137,18 +137,37 @@ A ação adota os preceitos das **metodologias ativas de aprendizagem**, na qual
 
 ### 4.2 Indicadores de Desempenho e Metodologia de Cálculo
 
-O acompanhamento da eficácia pedagógica da ação utiliza métricas quantitativas objetivas registradas automaticamente no banco de dados da plataforma:
+O acompanhamento da eficácia pedagógica da ação utilizou métricas quantitativas objetivas registradas automaticamente no banco de dados PostgreSQL da plataforma. Abaixo estão consolidados os dados empíricos apurados junto aos 11 participantes que completaram integralmente o ciclo formativo:
 
+#### 4.2.1 Tabela Consolidada de Resultados Empíricos
+| # | Participante | Nota Pré-Teste (0 a 5) | Nota Pós-Teste (0 a 5) | Evolução Absoluta ($\Delta$) | Evolução Relativa (%) | Percepção de Segurança |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|
+| 1 | **Gabi diniz** | 2,0 | 5,0 | +3,0 | +150,0% | Sim (Preparada) |
+| 2 | **Maria Julia** | 2,0 | 3,0 | +1,0 | +50,0% | Sim (Preparada) |
+| 3 | **Giovana** | 2,0 | 3,0 | +1,0 | +50,0% | Sim (Preparada) |
+| 4 | **Yasmin** | 4,0 | 5,0 | +1,0 | +25,0% | Sim (Preparada) |
+| 5 | **Malu** | 4,0 | 5,0 | +1,0 | +25,0% | Sim (Preparada) |
+| 6 | **Claudemir** | 5,0 | 5,0 | 0,0 | Manteve 100% | Sim (Preparado) |
+| 7 | **Rafaela** | 5,0 | 5,0 | 0,0 | Manteve 100% | Sim (Preparada) |
+| 8 | **Farias** | 5,0 | 5,0 | 0,0 | Manteve 100% | Sim (Preparado) |
+| 9 | **Lorena** | 5,0 | 5,0 | 0,0 | Manteve 100% | Sim (Preparada) |
+| 10 | **Gisele** | 5,0 | 5,0 | 0,0 | Manteve 100% | Sim (Preparada) |
+| 11 | **Marina farias** | 5,0 | 5,0 | 0,0 | Manteve 100% | Sim (Preparada) |
+| — | **MÉDIA GERAL** | **4,00 / 5,0** | **4,64 / 5,0** | **+0,64** | **+15,9%** | **100,0% (11/11)** |
+
+#### 4.2.2 Fórmulas e Apuração dos Indicadores
 1. **Média do Pré-teste ($\bar{X}_{pré}$):**
-   $$\bar{X}_{pré} = \frac{\sum \text{Pontos Obtidos no Pré-teste}}{\text{Total de Participantes}}$$
+   $$\bar{X}_{pré} = \frac{44}{11} = 4,00 \text{ pontos (80,0% de aproveitamento)}$$
 2. **Média do Pós-teste ($\bar{X}_{pós}$):**
-   $$\bar{X}_{pós} = \frac{\sum \text{Pontos Obtidos no Pós-teste}}{\text{Total de Participantes}}$$
+   $$\bar{X}_{pós} = \frac{51}{11} = 4,64 \text{ pontos (92,8% de aproveitamento)}$$
 3. **Evolução Média Absoluta ($\Delta E$):**
-   $$\Delta E = \bar{X}_{pós} - \bar{X}_{pré}$$
-4. **Taxa de Melhoria Coletiva ($TM\%$):**
-   $$TM\% = \left( \frac{\text{Nº de participantes com } \text{Nota}_{pós} > \text{Nota}_{pré}}{\text{Total de Participantes}} \right) \times 100$$
+   $$\Delta E = 4,64 - 4,00 = +0,64 \text{ pontos (+15,9% de ganho coletivo)}$$
+4. **Taxa de Melhoria Efetiva ($TM\%$):**
+   $$TM\% = \left( \frac{5}{11} \right) \times 100 = 45,5\%$$
+   *(45,5% dos participantes elevaram sua nota, com destaques para saltos de até +150%; os demais 54,5% já apresentavam boa proficiência inicial e gabaritaram o pós-teste mantendo a nota máxima 5,0).*
 5. **Índice de Percepção de Segurança Informacional ($IP\%$):**
-   Percentual de participantes que responderam positivamente ("Sim") à pergunta: *"Você se sente mais preparado e seguro para checar notícias suspeitas antes de compartilhar?"*
+   $$IP\% = \left( \frac{11}{11} \right) \times 100 = 100,0\%$$
+   *(Totalidade unânime dos 11 participantes atestou que a oficina e o Método PARE trouxeram maior preparo e confiança para lidar com conteúdos suspeitos).*
 
 ### 4.3 Alinhamento com os Objetivos de Desenvolvimento Sustentável (ODS — ONU)
 
