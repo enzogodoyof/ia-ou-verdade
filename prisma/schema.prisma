@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Participant {
+  id           String        @id @default(cuid())
+  name         String?       @default("Anônimo")
+  sessionToken String        @unique
+  location     String?       @default("Escola / Comunidade")
+  createdAt    DateTime      @default(now())
+
+  preTest      PreTest?
+  postTest     PostTest?
+  caseAnswers  CaseAnswer[]
+  feedback     Feedback?
+}
+
+model PreTest {
+  id            String       @id @default(cuid())
+  participantId String       @unique
+  participant   Participant  @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  score         Int          // de 0 a 5
+  answers       Json
+  createdAt     DateTime     @default(now())
+}
+
+model CaseAnswer {
+  id            String       @id @default(cuid())
+  participantId String
+  participant   Participant  @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  caseId        String
+  userVerdict   String       // "confiavel" | "suspeito" | "fake_ia"
+  isCorrect     Boolean
+  reflection    String?
+  createdAt     DateTime     @default(now())
+}
+
+model PostTest {
+  id            String       @id @default(cuid())
+  participantId String       @unique
+  participant   Participant  @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  score         Int          // de 0 a 5
+  answers       Json
+  createdAt     DateTime     @default(now())
+}
+
+model Feedback {
+  id            String       @id @default(cuid())
+  participantId String       @unique
+  participant   Participant  @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  feelsPrepared String       // "sim" | "parcialmente" | "nao"
+  comment       String?
+  createdAt     DateTime     @default(now())
+}

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgClinic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="60%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo Posto de Saúde / Clínica -->
+  <rect width="800" height="600" fill="url(#bgClinic)"/>
+  
+  <!-- Parede com azulejos clínicos e faixa verde/azul -->
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#cbd5e1" stroke-width="2"/>
+  <rect y="180" width="800" height="20" fill="#0284c7" opacity="0.8"/>
+
+  <!-- Logo Oficial SUS & Ministério da Saúde (Selo de Autenticidade) -->
+  <g transform="translate(40, 40)">
+    <rect width="210" height="70" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#cardShadow)"/>
+    <!-- Cruz / Logo SUS -->
+    <rect x="20" y="20" width="30" height="30" rx="6" fill="#0284c7"/>
+    <text x="35" y="42" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">+</text>
+    <text x="60" y="38" font-family="Arial Black, sans-serif" font-size="18" font-weight="900" fill="#0f172a">SUS</text>
+    <text x="60" y="52" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0284c7">Sistema Único de Saúde</text>
+  </g>
+
+  <!-- Selo "FONTE OFICIAL VERIFICADA" -->
+  <g transform="translate(560, 40)">
+    <rect width="200" height="40" rx="20" fill="#16a34a" filter="url(#cardShadow)"/>
+    <circle cx="25" cy="20" r="10" fill="#ffffff"/>
+    <path d="M 20 20 L 24 24 L 30 16" stroke="#16a34a" stroke-width="2.5" fill="none"/>
+    <text x="45" y="25" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">PORTAL GOV.BR / SAÚDE</text>
+  </g>
+
+  <!-- Ilustração Médica Documental -->
+  <g transform="translate(400, 310)">
+    <!-- Mesa Médica -->
+    <rect x="-350" y="140" width="700" height="150" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" rx="10"/>
+
+    <!-- Frasco de Vacina contra a Dengue -->
+    <g transform="translate(-180, 20)">
+      <rect x="-30" y="0" width="60" height="120" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+      <!-- Tampa de borracha -->
+      <rect x="-20" y="-15" width="40" height="15" rx="3" fill="#64748b"/>
+      <rect x="-15" y="-22" width="30" height="7" rx="2" fill="#94a3b8"/>
+      <!-- Rótulo do Frasco -->
+      <rect x="-28" y="25" width="56" height="70" fill="#ffffff"/>
+      <rect x="-28" y="25" width="56" height="15" fill="#0284c7"/>
+      <text x="0" y="36" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">VACINA DENGUE</text>
+      <text x="0" y="55" font-family="Arial, sans-serif" font-size="8" fill="#334155" text-anchor="middle">Dose 0,5 mL</text>
+      <text x="0" y="70" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#16a34a" text-anchor="middle">LOTE 2026/04</text>
+      <text x="0" y="85" font-family="Arial, sans-serif" font-size="6" fill="#64748b" text-anchor="middle">ANVISA REG. 102</text>
+    </g>
+
+    <!-- Seringa Descartável Graduada -->
+    <g transform="translate(40, -10) rotate(-35)">
+      <rect x="-10" y="-70" width="20" height="130" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="2" opacity="0.9"/>
+      <!-- Agulha -->
+      <line x1="0" y1="60" x2="0" y2="120" stroke="#cbd5e1" stroke-width="2"/>
+      <!-- Êmbolo -->
+      <rect x="-8" y="-120" width="16" height="60" fill="#38bdf8"/>
+      <!-- Marcações de mL -->
+      <line x1="-8" y1="-50" x2="-2" y2="-50" stroke="#64748b" stroke-width="1.5"/>
+      <line x1="-8" y1="-30" x2="-2" y2="-30" stroke="#64748b" stroke-width="1.5"/>
+      <line x1="-8" y1="-10" x2="-2" y2="-10" stroke="#64748b" stroke-width="1.5"/>
+      <line x1="-8" y1="10" x2="-2" y2="10" stroke="#64748b" stroke-width="1.5"/>
+      <line x1="-8" y1="30" x2="-2" y2="30" stroke="#64748b" stroke-width="1.5"/>
+    </g>
+
+    <!-- Caixa de Descarte Perfurocortante / Algodão -->
+    <rect x="180" y="50" width="90" height="90" rx="8" fill="#facc15" stroke="#ca8a04" stroke-width="3"/>
+    <text x="225" y="100" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#854d0e" text-anchor="middle">DESCARTE</text>
+  </g>
+
+  <!-- Rodapé do Card Noticioso -->
+  <rect x="40" y="470" width="720" height="90" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#cardShadow)"/>
+  <text x="70" y="505" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0f172a">
+    Campanha Nacional de Vacinação contra a Dengue (MS / 2026)
+  </text>
+  <text x="70" y="535" font-family="Arial, sans-serif" font-size="13" fill="#64748b">
+    Fonte: Ministério da Saúde • Distribuição em mais de 150 municípios prioritários pelo SUS
+  </text>
+  <circle cx="700" cy="515" r="16" fill="#dcfce7"/>
+  <path d="M 693 515 L 698 520 L 707 510" stroke="#16a34a" stroke-width="3" fill="none"/>
+</svg>

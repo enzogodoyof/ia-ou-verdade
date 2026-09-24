@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgTelegram" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1621"/>
+      <stop offset="100%" stop-color="#17212b"/>
+    </linearGradient>
+    <filter id="msgShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="15" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo Estilo Dark Mode Mensageiro Criptografado -->
+  <rect width="800" height="600" fill="url(#bgTelegram)"/>
+
+  <!-- Top Bar de Grupo Anônimo -->
+  <rect width="800" height="70" fill="#242f3d"/>
+  <circle cx="50" cy="35" r="20" fill="#e11d48"/>
+  <text x="50" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">👁️</text>
+  <text x="85" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Verdades Ocultas da Cidade (Canal Oficial)</text>
+  <text x="85" y="49" font-family="Arial, sans-serif" font-size="12" fill="#718096">24.819 membros • postado às 03:14</text>
+
+  <!-- Balão de Mensagem Encaminhada com Frequência -->
+  <g transform="translate(60, 110)">
+    <rect width="680" height="360" rx="16" fill="#182533" stroke="#2b5278" stroke-width="1.5" filter="url(#msgShadow)"/>
+
+    <!-- Tarja de "Mensagem Encaminhada com frequência" -->
+    <text x="30" y="35" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="#5396d6">
+      ↪ Encaminhada com muita frequência
+    </text>
+
+    <!-- Foto do Político / Vítima do Deepfake com Tarja Vermelha -->
+    <g transform="translate(30, 60)">
+      <rect width="180" height="200" rx="10" fill="#334155" stroke="#475569" stroke-width="2"/>
+      
+      <!-- Silhueta de Político em terno -->
+      <circle cx="90" cy="80" r="40" fill="#e2e8f0"/>
+      <path d="M 40 180 C 40 135, 140 135, 140 180 Z" fill="#0f172a"/>
+      <path d="M 80 145 L 90 170 L 100 145 Z" fill="#dc2626"/> <!-- Gravata vermelha -->
+
+      <!-- Tarja Vermelha "ÁUDIO VAZADO" sobre a foto -->
+      <rect x="-5" y="140" width="190" height="34" rx="4" fill="#dc2626" opacity="0.95"/>
+      <text x="90" y="162" font-family="Arial Black, sans-serif" font-size="13" font-weight="900" fill="#ffffff" text-anchor="middle">
+        ÁUDIO VAZADO!
+      </text>
+    </g>
+
+    <!-- Player de Áudio do WhatsApp / Telegram -->
+    <g transform="translate(240, 90)">
+      <!-- Botão Play Redondo -->
+      <circle cx="35" cy="45" r="30" fill="#2b5278"/>
+      <polygon points="28,30 48,45 28,60" fill="#ffffff"/>
+
+      <!-- Linhas de Onda Sonora (Waveform sintética com picos artificiais) -->
+      <g transform="translate(85, 45)" stroke="#5396d6" stroke-linecap="round">
+        <line x1="0" y1="-12" x2="0" y2="12" stroke-width="4"/>
+        <line x1="12" y1="-25" x2="12" y2="25" stroke-width="4"/>
+        <line x1="24" y1="-18" x2="24" y2="18" stroke-width="4"/>
+        <line x1="36" y1="-32" x2="36" y2="32" stroke-width="4"/>
+        <line x1="48" y1="-8" x2="48" y2="8" stroke-width="4"/>
+        <line x1="60" y1="-28" x2="60" y2="28" stroke-width="4"/>
+        <line x1="72" y1="-38" x2="72" y2="38" stroke-width="4"/>
+        <line x1="84" y1="-22" x2="84" y2="22" stroke-width="4"/>
+        <line x1="96" y1="-14" x2="96" y2="14" stroke-width="4"/>
+        <line x1="108" y1="-30" x2="108" y2="30" stroke-width="4"/>
+        <line x1="120" y1="-42" x2="120" y2="42" stroke-width="4" stroke="#e11d48"/>
+        <line x1="132" y1="-35" x2="132" y2="35" stroke-width="4"/>
+        <line x1="144" y1="-15" x2="144" y2="15" stroke-width="4"/>
+        <line x1="156" y1="-25" x2="156" y2="25" stroke-width="4"/>
+        <line x1="168" y1="-38" x2="168" y2="38" stroke-width="4"/>
+        <line x1="180" y1="-20" x2="180" y2="20" stroke-width="4"/>
+        <line x1="192" y1="-30" x2="192" y2="30" stroke-width="4"/>
+        <line x1="204" y1="-10" x2="204" y2="10" stroke-width="4"/>
+        <line x1="216" y1="-28" x2="216" y2="28" stroke-width="4"/>
+        <line x1="228" y1="-35" x2="228" y2="35" stroke-width="4"/>
+        <line x1="240" y1="-12" x2="240" y2="12" stroke-width="4"/>
+        <line x1="252" y1="-20" x2="252" y2="20" stroke-width="4"/>
+        <line x1="264" y1="-8" x2="264" y2="8" stroke-width="4"/>
+        <line x1="276" y1="-18" x2="276" y2="18" stroke-width="4"/>
+        <line x1="288" y1="-24" x2="288" y2="24" stroke-width="4"/>
+      </g>
+
+      <!-- Duração do Áudio e Metadados -->
+      <text x="85" y="80" font-family="Arial, sans-serif" font-size="12" fill="#718096">0:47 / 0:47</text>
+      <text x="320" y="80" font-family="Arial, sans-serif" font-size="12" fill="#718096">2x • 48 kHz</text>
+
+      <!-- Legenda Sensacionalista do Encaminhamento -->
+      <text x="0" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">
+        "ESCÂNDALO! Candidato confessa em reunião secreta que vai confiscar a poupança!"
+      </text>
+      <text x="0" y="155" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">
+        Voz clonada por IA com software de síntese neural • Sem respiração natural
+      </text>
+    </g>
+
+    <!-- Badge de Simulação Pedagógica -->
+    <rect x="30" y="300" width="620" height="35" rx="8" fill="#e11d48" opacity="0.2" stroke="#e11d48" stroke-width="1"/>
+    <text x="340" y="322" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fca5a5" text-anchor="middle">
+      ⚠️ SIMULAÇÃO EDUCATIVA DE CLONAGEM DE VOZ (DEEPFAKE DE ÁUDIO)
+    </text>
+  </g>
+
+  <!-- Rodapé -->
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+    Indícios: Publicado na véspera da votação, canal sem autoria, ausência de ruídos ambientais
+  </text>
+</svg>
