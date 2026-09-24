@@ -17,25 +17,26 @@ export async function GET(req: Request) {
       );
     }
 
-    const isConnected = await checkDatabaseConnection();
-
-    if (!isConnected) {
+    let participants;
+    try {
+      participants = await prisma.participant.findMany({
+        include: {
+          preTest: true,
+          postTest: true,
+          caseAnswers: true,
+          feedback: true,
+        },
+        orderBy: { createdAt: "desc" },
+      });
+    } catch (dbErr: any) {
+      console.error("Erro Prisma ao buscar participantes:", dbErr);
       return NextResponse.json({
         source: "sem_banco",
-        message: "Banco de dados não está conectado. Os dados estão armazenados apenas localmente no navegador de cada participante.",
+        message: "Banco de dados não está acessível no momento.",
+        errorDetails: dbErr?.message || String(dbErr),
         participants: [],
       });
     }
-
-    const participants = await prisma.participant.findMany({
-      include: {
-        preTest: true,
-        postTest: true,
-        caseAnswers: true,
-        feedback: true,
-      },
-      orderBy: { createdAt: "desc" },
-    });
 
     return NextResponse.json({
       source: "database",

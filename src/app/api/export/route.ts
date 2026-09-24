@@ -17,11 +17,20 @@ export async function GET(req: Request) {
       );
     }
 
-    const isConnected = await checkDatabaseConnection();
-
-    if (!isConnected) {
-      // Retorna CSV vazio com cabeçalhos
-      const emptyCSV = "Nome,Nota Pré-Teste,Nota Pós-Teste,Evolução,Se Sente Preparado,Comentário,Data\nSem dados - banco não conectado,,,,,, ";
+    let participants = [];
+    try {
+      participants = await prisma.participant.findMany({
+        include: {
+          preTest: true,
+          postTest: true,
+          caseAnswers: true,
+          feedback: true,
+        },
+        orderBy: { createdAt: "desc" },
+      });
+    } catch (dbErr) {
+      console.error("Erro Prisma no export:", dbErr);
+      const emptyCSV = "Nome,Nota Pré-Teste,Nota Pós-Teste,Evolução,Se Sente Preparado,Comentário,Data\nSem dados ou erro de conexão,,,,,, ";
       return new Response(emptyCSV, {
         headers: {
           "Content-Type": "text/csv; charset=utf-8",
@@ -29,16 +38,6 @@ export async function GET(req: Request) {
         },
       });
     }
-
-    const participants = await prisma.participant.findMany({
-      include: {
-        preTest: true,
-        postTest: true,
-        caseAnswers: true,
-        feedback: true,
-      },
-      orderBy: { createdAt: "desc" },
-    });
 
     if (format === "json") {
       const data = participants.map((p) => ({
