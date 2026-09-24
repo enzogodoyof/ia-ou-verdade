@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { prisma, checkDatabaseConnection } from "@/lib/prisma";
 import { INITIAL_DEMO_METRICS } from "@/lib/data/mockData";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     const isConnected = await checkDatabaseConnection();
